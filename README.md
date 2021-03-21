@@ -1,8 +1,6 @@
-# arch-i3-usb
+# arch-awesome-usb
 
 This [ALMA](https://github.com/r-darwish/alma) preset installs a fully usable and persistent Arch Linux system on a LiveUSB.
-
-Note that the installation of the oh-my-zsh and MiniVim config files means the host computer must have internet access during image creation.
 
 The preset files are simple TOML files which can be easily customised to add new packages or installation steps.
 
@@ -37,9 +35,9 @@ At the moment ALMA sets the locale to `en_US.UTF-8`. You could easily override t
 
 Please create a PR or issues for anything you think is missing!
 
-## Screenshot
+<!-- ## Screenshot -->
 
-![Screenshot from qemu](./screenshot.png "Screenshot")
+<!-- ![Screenshot from qemu](./screenshot.png "Screenshot") -->
 
 
 ## Usage
@@ -79,8 +77,7 @@ use the additional preset files in the `additional/` directory:
 $ cp -rf additional/* preset/
 ```
 
-The additional presets include many more useful utilities, and adds the
-i3status-rust bar.
+The additional presets include many more useful utilities.
 
 ## What is included
 ### User
@@ -95,8 +92,6 @@ Both Intel and AMD microcode is installed (the correct one will be loaded on boo
 ### Networking
 
 NetworkManager and dhcpcd are installed.
-
-nm-applet is run on startup.
 
 ### Video drivers
 
@@ -122,34 +117,25 @@ Urxvt is also installed in the additional presets.
 
 ### Display Manager
 
-i3 is installed, a sample configuration is included in this preset.
+awesome is installed, a sample configuration is included in this preset.
 
-Meta+r can be used to launch programs via dmenu.
-
-i3status is also installed as a status bar, a sample configuration is included in this preset.
+Meta+Space can be used to launch programs via rofi.
 
 ### Text editors
 
-vim and gvim are installed, along with the MiniVim configuration.
-
-emacs and nano are also installed in the additional presets.
+vim and gvim are installed.
 
 ### Shell
 
 fish is the default shell.
 
-zsh is installed, along with the oh-my-zsh configuration.
-
 ### Web browsers
 
 Firefox is installed.
 
-In the additional presets, chromium is also installed, and
-lynx and elinks are installed for use on the CLI.
-
 ### File management
 
-thunar is installed, and can be launch with Meta+f.
+thunar is installed.
 
 ### Filesystem tools
 
@@ -165,11 +151,7 @@ git is installed.
 
 ### Multimedia
 
-In the additional presets, mpd is installed for playing music,
-along with the ncmpcpp and Ario frontends.
-The default music directory is set to ~/Music.
-
-mpv is installed in the additional presets.
+<!-- mpv is installed in the additional presets. -->
 
 ### KeepassXC
 
