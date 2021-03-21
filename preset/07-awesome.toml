@@ -1,5 +1,5 @@
 packages = ["awesome", "rofi"]
-shared_directories = ["awesome_config"]
+shared_directories = ["awesome_config", "rofi_config"]
 script = """
 mkdir -p /home/${ALMA_USER}/.config/awesome/
 cp /shared_dirs/awesome_config/autorun.sh /home/${ALMA_USER}/.config/awesome/autorun.sh
@@ -10,5 +10,10 @@ chown ${ALMA_USER} /home/${ALMA_USER}/.config/awesome/mytheme.lua
 chown ${ALMA_USER} /home/${ALMA_USER}/.config/awesome/rc.lua
 chown -R ${ALMA_USER} /home/${ALMA_USER}/.config/awesome
 chgrp -R ${ALMA_USER} /home/${ALMA_USER}/.config/awesome
+mkdir -p /home/${ALMA_USER}/.config/rofi/
+cp /shared_dirs/rofi_config/config.rasi /home/${ALMA_USER}/.config/rofi/config.rasi
+chown ${ALMA_USER} /home/${ALMA_USER}/.config/rofi/config.rasi
+chown -R ${ALMA_USER} /home/${ALMA_USER}/.config/rofi
+chgrp -R ${ALMA_USER} /home/${ALMA_USER}/.config/rofi
 """
 environment_variables = ["ALMA_USER"]
