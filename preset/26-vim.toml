@@ -1,0 +1,12 @@
+packages = ["gvim"]
+
+shared_directories = ["vim_config"]
+
+script = """
+cp /shared_dirs/vim_config/vimrc /home/${ALMA_USER}/.vimrc
+chown ${ALMA_USER} /home/${ALMA_USER}/.vimrc
+sudo -u ${ALMA_USER} git clone https://github.com/VundleVim/Vundle.vim.git /home/${ALMA_USER}/.vim/bundle/Vundle.vim
+sudo -u ${ALMA_USER} vim -i NONE -c VundleUpdate -c quitall 
+"""
+
+environment_variables = ["ALMA_USER"]

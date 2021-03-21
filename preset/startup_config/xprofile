@@ -1,6 +1,5 @@
 #!/bin/bash
 
-setxkbmap -option compose:caps ;
 cbatticon &
 nm-applet &
 
