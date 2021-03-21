@@ -1,0 +1,7 @@
+packages = ["picom"]
+shared_directories = ["picom_config"]
+script = """
+cp /shared_dirs/picom_config/picom.conf /home/${ALMA_USER}/.config/picom.conf
+chown ${ALMA_USER} /home/${ALMA_USER}/.config/picom.conf
+"""
+environment_variables = ["ALMA_USER"]
