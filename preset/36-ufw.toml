@@ -1,0 +1,6 @@
+packages = ["ufw"]
+
+script = """
+systemctl enable ufw.service
+ufw enable
+"""
