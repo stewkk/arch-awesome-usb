@@ -1,44 +1,4 @@
-abbr -a yr 'cal -y'
-abbr -a c cargo
-abbr -a e nvim
-abbr -a :e nvim
-abbr -a b bat
-abbr -a cat bat
-abbr -a vim nvim
-abbr -a o xdg-open
-abbr -a g git
-abbr -a gc 'git checkout'
-abbr -a ga 'git add -p'
-abbr -a vimdiff 'nvim -d'
-abbr -a ct 'cargo t'
-complete --command yay --wraps pacman
-
-
-
 set -U fish_user_paths /usr/local/sbin /usr/local/bin /usr/bin /bin
-
-if status --is-interactive
-	tmux ^ /dev/null; and exec true
-end
-
-if command -v yay > /dev/null
-	abbr -a p 'yay'
-	abbr -a up 'yay -Syu'
-else
-	abbr -a p 'sudo pacman'
-	abbr -a up 'sudo pacman -Syu'
-end
-
-if command -v exa > /dev/null
-	abbr -a l 'exa -ls newest'
-	abbr -a ls 'exa'
-	abbr -a ll 'exa -l'
-	abbr -a lll 'exa -la'
-else
-	abbr -a l 'ls'
-	abbr -a ll 'ls -l'
-	abbr -a lll 'ls -la'
-end
 
 if test -f /usr/share/autojump/autojump.fish;
 	source /usr/share/autojump/autojump.fish;
@@ -71,14 +31,8 @@ setenv LESS_TERMCAP_so \e'[38;5;246m'    # begin standout-mode - info box
 setenv LESS_TERMCAP_ue \e'[0m'           # end underline
 setenv LESS_TERMCAP_us \e'[04;38;5;146m' # begin underline
 
-setenv FZF_DEFAULT_COMMAND 'fd --type file --follow'
-setenv FZF_CTRL_T_COMMAND 'fd --type file --follow'
-setenv FZF_DEFAULT_OPTS '--height 20%'
-setenv FZF_TMUX '1'
-
-setenv EDITOR 'nvim'
-setenv SUDO_EDITOR 'nvim'
-setenv VISUAL 'nvim'
+setenv EDITOR 'vim'
+setenv SUDO_EDITOR 'vim'
 setenv BROWSER 'firefox'
 # Fish should not add things to clipboard when killing
 # See https://github.com/fish-shell/fish-shell/issues/772
