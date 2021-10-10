@@ -1,3 +1,6 @@
+
+# NO LONGER MAINTAINED
+
 # arch-awesome-usb
 
 This [ALMA](https://github.com/r-darwish/alma) preset installs a fully usable and persistent Arch Linux system on a LiveUSB.
